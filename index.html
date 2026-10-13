@@ -34,7 +34,11 @@
     <p>Institut de Recherche Mathématique Avancée (IRMA)<br>Université de Strasbourg, France</p>
     <p>Institute for Advanced Study in Mathematics<br>Harbin Institute of Technology, China</p>
   </div>
-  <p class="contact">Email: <span>[your academic email]</span></p>
+  <p class="contact">
+  Email:
+  <a href="mailto:lihong.yang@unistra.fr">yourname@unistra.fr</a>;
+  <a href="mailto:lihong.yang.math@gmail.com">lihong.yang.math@gmail.com</a>
+</p>
 </header>
 <main>
   <nav id="paper-filters" aria-label="Filter publications by topic">
@@ -51,24 +55,73 @@
 <script>
 // Add new entries here. All views are automatically sorted newest first.
 // Give each paper one or more topic codes: 'core', 'permutation'.
+
 const papers = [
   {
-    year: 2026, date: '2026-01-01',
-    title: 'A self-conjugate partition analog of (t, t+1)-core partitions with distinct parts',
+    year: 2027,
+    date: '2027-01-01',
+    title: 'On the Largest Size of (s,s+3)-Core Partitions with Distinct Parts',
     authors: 'H. Xiong and L. Yang',
-    venue: 'European Journal of Combinatorics 133 (2026), 104322',
+    venue: 'Advances in Applied Mathematics, accepted',
     topics: ['core'],
-    url: '' // Optional: add paper DOI or arXiv URL
+    url: ''
   },
   {
-    year: 2023, date: '2023-01-01',
+    year: 2026,
+    date: '2026-11-01',
+    title: 'On self-conjugate (t,t+1,...,t+p)-core partitions into distinct parts',
+    authors: 'H. Xiong and L. Yang',
+    venue: 'Discrete Mathematics 349 (2026), no. 11, Paper No. 115283, 13 pp.',
+    topics: ['core'],
+    url: 'https://doi.org/10.1016/j.disc.2026.115283'
+  },
+  {
+    year: 2026,
+    date: '2026-01-01',
+    title: 'A self-conjugate partition analog of (t,t+1)-core partitions with distinct parts',
+    authors: 'H. Xiong and L. Yang',
+    venue: 'European Journal of Combinatorics 133 (2026), Paper No. 104322, 15 pp.',
+    topics: ['core'],
+    url: 'https://doi.org/10.1016/j.ejc.2025.104322'
+  },
+  {
+    year: 2023,
+    date: '2023-07-01',
     title: 'Further extensions of Haglund–Remmel–Wilson identity',
     authors: 'S. H. F. Yan, S. Ling, L. Yang and R. D. P. Zhou',
-    venue: 'Advances in Applied Mathematics 144 (2023), 102459',
+    venue: 'Advances in Applied Mathematics 144 (2023), Paper No. 102459, 30 pp.',
     topics: ['permutation'],
-    url: ''
+    url: 'https://doi.org/10.1016/j.aam.2022.102459'
+  },
+  {
+    year: 2022,
+    date: '2022-07-01',
+    title: 'On a conjecture concerning shuffle-compatible permutation statistics',
+    authors: 'L. Yang and S. H. F. Yan',
+    venue: 'Electronic Journal of Combinatorics 29 (2022), no. 3, Paper No. 3.3, 11 pp.',
+    topics: ['permutation'],
+    url: 'https://doi.org/10.37236/10953'
+  },
+  {
+    year: 2022,
+    date: '2022-03-01',
+    title: 'Partial γ-positivity for quasi-Stirling permutations of multisets',
+    authors: 'S. H. F. Yan, Y. Huang and L. Yang',
+    venue: 'Discrete Mathematics 345 (2022), no. 3, Paper No. 112742, 7 pp.',
+    topics: ['permutation'],
+    url: 'https://doi.org/10.1016/j.disc.2021.112742'
+  },
+  {
+    year: 2022,
+    date: '2022-01-01',
+    title: 'Statistics on quasi-Stirling permutations of multisets',
+    authors: 'S. H. F. Yan, L. Yang, Y. Huang and X. Zhu',
+    venue: 'Journal of Algebraic Combinatorics 55 (2022), no. 4, 1265–1277',
+    topics: ['permutation'],
+    url: 'https://doi.org/10.1007/s10801-021-01093-z'
   }
 ];
+
 const topicLabels = {all:'All papers', core:'Core partitions', permutation:'Permutation Statistics'};
 function renderPapers(filter='all') {
   document.querySelectorAll('#paper-filters button').forEach(button => {
