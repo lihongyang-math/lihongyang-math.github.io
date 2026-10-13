@@ -48,7 +48,7 @@
   </nav>
   <section aria-live="polite" aria-atomic="true">
     <h2 id="list-title">All papers</h2>
-    <ol id="paper-list"></ol>
+    <ol id="paper-list" reversed></ol>
   </section>
 </main>
 <footer>Last updated: October 2026</footer>
@@ -132,6 +132,7 @@ function renderPapers(filter='all') {
   list.replaceChildren();
   const matching = papers.filter(paper => filter === 'all' || paper.topics.includes(filter))
     .sort((a,b) => b.date.localeCompare(a.date) || b.year-a.year || a.title.localeCompare(b.title));
+  list.start = matching.length;
   for(const paper of matching) {
     const item = document.createElement('li');
     const authors = document.createElement('span'); authors.textContent = paper.authors + ', ';
