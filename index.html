@@ -165,8 +165,9 @@ if (paper.pdf) {
   download.appendChild(document.createTextNode(']'));
 
   item.appendChild(download);
-}
-list.appendChild(item);
+  }
+  list.appendChild(item);
+ }
 }
 document.getElementById('paper-filters').addEventListener('click', event => {
   const button = event.target.closest('button[data-filter]');
