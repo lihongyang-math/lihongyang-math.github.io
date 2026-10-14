@@ -148,9 +148,25 @@ function renderPapers(filter='all') {
     const title = document.createElement(paper.url ? 'a' : 'span');
     title.className = 'paper-title'; title.textContent = paper.title;
     if(paper.url) { title.href = paper.url; title.target='_blank'; title.rel='noopener noreferrer'; }
-    const venue = document.createElement('span'); venue.className = 'venue'; venue.textContent = ', ' + paper.venue + '.';
-    item.append(authors, title, venue); list.append(item);
-  }
+    const venue = document.createElement('span'); venue.className = 'venue'; venue.textContent = ', ' + paper.venue + '.';   
+item.append(authors, title, venue);
+
+if (paper.pdf) {
+  const download = document.createElement('span');
+  download.appendChild(document.createTextNode(' [download '));
+
+  const pdfLink = document.createElement('a');
+  pdfLink.href = paper.pdf;
+  pdfLink.textContent = 'pdf';
+  pdfLink.target = '_blank';
+  pdfLink.rel = 'noopener noreferrer';
+
+  download.appendChild(pdfLink);
+  download.appendChild(document.createTextNode(']'));
+
+  item.appendChild(download);
+}
+list.appendChild(item);
 }
 document.getElementById('paper-filters').addEventListener('click', event => {
   const button = event.target.closest('button[data-filter]');
